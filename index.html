@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Energitech Solution | Solutions CEE B2B & B2C</title>
+
+<meta name="description" content="Energitech Solution accompagne particuliers et professionnels dans leurs projets de rénovation énergétique et de solutions CEE.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07110d;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(7,17,13,0.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #38e27d;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #d8e1dc;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #38e27d;
+}
+
+.nav-button {
+    background: #38e27d;
+    color: #06100b;
+    padding: 11px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    background:
+        linear-gradient(90deg, rgba(4,14,9,.96), rgba(4,14,9,.72), rgba(4,14,9,.4)),
+        url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid rgba(56,226,125,.4);
+    border-radius: 30px;
+    color: #38e27d;
+    background: rgba(56,226,125,.08);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #38e27d;
+}
+
+.hero p {
+    color: #c5d0c9;
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 35px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: #38e27d;
+    color: #06100b;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.05);
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,.1);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.section-title .small {
+    color: #38e27d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 12px 0;
+    letter-spacing: -1.5px;
+}
+
+.section-title p {
+    color: #aebbb3;
+}
+
+/* CARDS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.card {
+    background: linear-gradient(145deg,#102018,#0a1610);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 22px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(56,226,125,.35);
+}
+
+.icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: rgba(56,226,125,.12);
+    color: #38e27d;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #aebbb3;
+    font-size: 14px;
+}
+
+/* CEE */
+
+.cee {
+    background: #0b1711;
+}
+
+.cee-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.cee-image {
+    min-height: 420px;
+    border-radius: 25px;
+    background:
+        linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+}
+
+.checks {
+    margin-top: 25px;
+}
+
+.check {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0;
+    color: #d5ded9;
+}
+
+.check span {
+    color: #38e27d;
+    font-weight: bold;
+}
+
+/* AUDIENCE */
+
+.audience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.audience-card {
+    min-height: 340px;
+    border-radius: 25px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+}
+
+.audience-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent,rgba(0,0,0,.85));
+}
+
+.audience-card > * {
+    position: relative;
+}
+
+.b2b {
+    background:
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+}
+
+.b2c {
+    background:
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+}
+
+.audience-card h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.audience-card p {
+    color: #d2dad5;
+}
+
+/* PROCESS */
+
+.process {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.step {
+    position: relative;
+    padding: 25px;
+    border-top: 1px solid rgba(56,226,125,.4);
+}
+
+.number {
+    font-size: 13px;
+    color: #38e27d;
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+
+.contact {
+    background:
+        linear-gradient(120deg,#102219,#07110d);
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-info h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #aebbb3;
+    margin-bottom: 30px;
+}
+
+.contact-links a {
+    display: block;
+    margin: 14px 0;
+    color: #dfe7e2;
+}
+
+.contact-links a:hover {
+    color: #38e27d;
+}
+
+form {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    padding: 30px;
+    border-radius: 25px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #07110d;
+    border: 1px solid rgba(255,255,255,.12);
+    color: white;
+    border-radius: 10px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30px;
+    background: #38e27d;
+    color: #06100b;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 0;
+    text-align: center;
+    color: #84938a;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    color: white;
+    font-size: 27px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+
+    nav {
+        display: none;
+    }
+
+    .grid,
+    .cee-box,
+    .audience,
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .process {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+}
+
+@media(max-width:550px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .process {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .contact-info h2 {
+        font-size: 38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="#accueil" class="logo">
+Energitech <span>Solution</span>
+</a>
+
+<nav>
+<a href="#cee">CEE</a>
+<a href="#b2b">B2B</a>
+<a href="#b2c">B2C</a>
+<a href="#solutions">Solutions</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="nav-button" href="#contact">
+Parlons de votre projet
+</a>
+
+</div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="accueil">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="badge">
+⚡ Solutions énergétiques & CEE
+</div>
+
+<h1>
+Optimisez votre énergie.<br>
+<span>Valorisez vos projets.</span>
+</h1>
+
+<p>
+Energitech Solution accompagne les entreprises et les particuliers dans leurs projets liés à la performance énergétique et aux dispositifs CEE.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-primary">
+Étudier mon projet
+</a>
+
+<a href="#cee" class="btn btn-secondary">
+Découvrir les CEE
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CEE -->
+
+<section class="cee" id="cee">
+
+<div class="container">
+
+<div class="cee-box">
+
+<div class="cee-image"></div>
+
+<div>
+
+<div class="section-title">
+
+<div class="small">
+Les CEE
+</div>
+
+<h2>
+Les Certificats d'Économies d'Énergie
+</h2>
+
+<p>
+Les CEE constituent un dispositif permettant d'encourager la réalisation de travaux et d'équipements améliorant la performance énergétique.
+</p>
+
+</div>
+
+<div class="checks">
+
+<div class="check">
+<span>✓</span>
+Analyse du projet
+</div>
+
+<div class="check">
+<span>✓</span>
+Identification des solutions adaptées
+</div>
+
+<div class="check">
+<span>✓</span>
+Accompagnement administratif
+</div>
+
+<div class="check">
+<span>✓</span>
+Suivi du dossier
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- B2B / B2C -->
+
+<section id="b2b">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Nos accompagnements
+</div>
+
+<h2>
+Des solutions pour les professionnels et les particuliers.
+</h2>
+
+<p>
+Nous étudions votre situation afin d'identifier les dispositifs et solutions énergétiques pouvant correspondre à votre projet.
+</p>
+
+</div>
+
+
+<div class="audience">
+
+<div class="audience-card b2b" id="b2b">
+
+<h3>B2B</h3>
+
+<p>
+Entreprises, commerces, bureaux, industries, copropriétés et bâtiments professionnels.
+</p>
+
+</div>
+
+
+<div class="audience-card b2c" id="b2c">
+
+<h3>B2C</h3>
+
+<p>
+Accompagnement des particuliers dans leurs projets d'amélioration énergétique du logement.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOLUTIONS -->
+
+<section id="solutions">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Solutions énergétiques
+</div>
+
+<h2>
+Des projets étudiés au cas par cas.
+</h2>
+
+<p>
+La prise en charge et les conditions d'éligibilité peuvent dépendre du bâtiment, des travaux, des équipements et des critères applicables au dossier.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">💡</div>
+
+<h3>Éclairage LED</h3>
+
+<p>
+Solutions d'éclairage à haute efficacité énergétique pour les bâtiments professionnels et particuliers.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🏢</div>
+
+<h3>Bâtiments professionnels</h3>
+
+<p>
+Étude des possibilités d'amélioration énergétique pour bureaux, commerces et locaux professionnels.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🏠</div>
+
+<h3>Habitat</h3>
+
+<p>
+Solutions permettant d'améliorer le confort et la performance énergétique des logements.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">❄️</div>
+
+<h3>Chauffage & équipements</h3>
+
+<p>
+Identification des équipements et solutions pouvant contribuer à réduire les consommations d'énergie.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">♻️</div>
+
+<h3>Rénovation énergétique</h3>
+
+<p>
+Accompagnement dans la réflexion et la préparation de projets de rénovation énergétique.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📊</div>
+
+<h3>Étude du projet</h3>
+
+<p>
+Analyse de votre situation afin d'identifier les solutions pertinentes et les démarches à envisager.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Notre méthode
+</div>
+
+<h2>
+Simple, claire et transparente.
+</h2>
+
+</div>
+
+
+<div class="process">
+
+<div class="step">
+
+<div class="number">01 — CONTACT</div>
+
+<h3>Vous nous contactez</h3>
+
+<p>
+Présentez-nous votre projet et vos besoins.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">02 — ANALYSE</div>
+
+<h3>Nous étudions</h3>
+
+<p>
+Nous analysons les caractéristiques de votre projet.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">03 — SOLUTIONS</div>
+
+<h3>Nous identifions</h3>
+
+<p>
+Nous recherchons les solutions énergétiques adaptées.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">04 — SUIVI</div>
+
+<h3>Nous vous accompagnons</h3>
+
+<p>
+Nous vous accompagnons dans les différentes étapes du dossier.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="contact-info">
+
+<div class="section-title">
+
+<div class="small">
+Contact
+</div>
+
+<h2>
+Parlons de votre projet.
+</h2>
+
+<p>
+Vous êtes un particulier ou un professionnel ? Contactez Energitech Solution pour une première étude de votre projet.
+</p>
+
+</div>
+
+
+<div class="contact-links">
+
+<a href="tel:+33757990380">
+📞 07 57 99 03 80
+</a>
+
+<a href="mailto:energitech.solution@gmail.com">
+✉️ energitech.solution@gmail.com
+</a>
+
+<a href="https://wa.me/33757990380" target="_blank">
+💬 Nous contacter sur WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<form onsubmit="sendWhatsApp(event)">
+
+<input
+type="text"
+id="name"
+placeholder="Votre nom"
+required
+>
+
+<input
+type="tel"
+id="phone"
+placeholder="Votre téléphone"
+required
+>
+
+<input
+type="email"
+id="email"
+placeholder="Votre e-mail"
+>
+
+<select id="type">
+
+<option value="Particulier">
+Particulier
+</option>
+
+<option value="Entreprise">
+Entreprise
+</option>
+
+<option value="Autre">
+Autre
+</option>
+
+</select>
+
+<textarea
+id="message"
+placeholder="Décrivez votre projet..."
+required
+></textarea>
+
+<button type="submit">
+Envoyer ma demande
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+© 2026 Energitech Solution — Solutions énergétiques & CEE
+
+</div>
+
+</footer>
+
+
+<a
+class="whatsapp"
+href="https://wa.me/33757990380"
+target="_blank"
+aria-label="WhatsApp"
+>
+☏
+</a>
+
+
+<script>
+
+function sendWhatsApp(event) {
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const email =
+document.getElementById("email").value;
+
+const type =
+document.getElementById("type").value;
+
+const message =
+document.getElementById("message").value;
+
+const text =
+"Bonjour Energitech Solution,%0A%0A" +
+"Nom : " + encodeURIComponent(name) + "%0A" +
+"Téléphone : " + encodeURIComponent(phone) + "%0A" +
+"E-mail : " + encodeURIComponent(email) + "%0A" +
+"Profil : " + encodeURIComponent(type) + "%0A%0A" +
+"Projet : " + encodeURIComponent(message);
+
+window.open(
+"https://wa.me/33757990380?text=" + text,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
