@@ -3,502 +3,512 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Energitech Solution | Solutions CEE B2B & B2C</title>
-
-<meta name="description" content="Energitech Solution accompagne particuliers et professionnels dans leurs projets de rénovation énergétique et de solutions CEE.">
+<meta name="theme-color" content="#06110b">
+<meta name="description" content="Energitech Solution accompagne professionnels et particuliers dans leurs projets de performance énergétique et de dispositifs CEE.">
+<meta name="robots" content="index, follow">
+<title>Energitech Solution | Performance énergétique & CEE</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+  --bg:#06110b;
+  --bg2:#0a1810;
+  --card:#0d2116;
+  --green:#43e58a;
+  --text:#f4faf6;
+  --muted:#a9b9b0;
+  --line:rgba(255,255,255,.10);
+  --max:1180px;
 }
 
-html {
-    scroll-behavior: smooth;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #07110d;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(92%,var(--max));margin:auto}
 
 /* HEADER */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  background:rgba(6,17,11,.82);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-size:20px;
+  font-weight:900;
+  white-space:nowrap;
+}
+.logo-mark{
+  width:36px;height:36px;
+  border-radius:11px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,#43e58a,#8affb8);
+  color:#06110b;
+  font-weight:900;
+}
+.logo span:last-child{color:var(--green)}
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(7,17,13,0.92);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+nav{
+  display:flex;
+  gap:27px;
+}
+nav a{
+  color:#c9d5ce;
+  font-size:14px;
+  transition:.25s;
+}
+nav a:hover{color:var(--green)}
+
+.nav-button{
+  padding:11px 18px;
+  border-radius:30px;
+  background:var(--green);
+  color:#06110b;
+  font-size:13px;
+  font-weight:800;
 }
 
-.nav {
-    height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 23px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
-
-.logo span {
-    color: #38e27d;
-}
-
-nav {
-    display: flex;
-    gap: 28px;
-}
-
-nav a {
-    color: #d8e1dc;
-    font-size: 14px;
-    transition: .3s;
-}
-
-nav a:hover {
-    color: #38e27d;
-}
-
-.nav-button {
-    background: #38e27d;
-    color: #06100b;
-    padding: 11px 18px;
-    border-radius: 30px;
-    font-weight: 700;
+.menu{
+  display:none;
+  width:44px;height:44px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(255,255,255,.05);
+  color:white;
+  font-size:22px;
 }
 
 /* HERO */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 100px;
-    background:
-        linear-gradient(90deg, rgba(4,14,9,.96), rgba(4,14,9,.72), rgba(4,14,9,.4)),
-        url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=85")
-        center/cover;
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  padding:130px 0 90px;
+  background:
+    linear-gradient(90deg,rgba(4,13,8,.98),rgba(4,13,8,.78),rgba(4,13,8,.40)),
+    url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2200&q=85")
+    center/cover;
 }
-
-.hero-content {
-    max-width: 760px;
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
 }
-
-.badge {
-    display: inline-block;
-    padding: 8px 15px;
-    border: 1px solid rgba(56,226,125,.4);
-    border-radius: 30px;
-    color: #38e27d;
-    background: rgba(56,226,125,.08);
-    font-size: 13px;
-    margin-bottom: 25px;
+.badge{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:8px 14px;
+  border:1px solid rgba(67,229,138,.3);
+  background:rgba(67,229,138,.08);
+  border-radius:30px;
+  color:var(--green);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:25px;
 }
-
-.hero h1 {
-    font-size: clamp(42px, 7vw, 78px);
-    line-height: 1.02;
-    letter-spacing: -3px;
-    margin-bottom: 25px;
+.dot{
+  width:7px;height:7px;
+  border-radius:50%;
+  background:var(--green);
 }
-
-.hero h1 span {
-    color: #38e27d;
+h1{
+  font-size:clamp(44px,7vw,82px);
+  line-height:.98;
+  letter-spacing:-4px;
+  margin-bottom:25px;
 }
-
-.hero p {
-    color: #c5d0c9;
-    font-size: 18px;
-    max-width: 650px;
-    margin-bottom: 35px;
+h1 span{color:var(--green)}
+.hero p{
+  max-width:680px;
+  color:#c4d0c8;
+  font-size:18px;
+  margin-bottom:34px;
 }
-
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
 }
-
-.btn {
-    display: inline-block;
-    padding: 15px 25px;
-    border-radius: 35px;
-    font-weight: 700;
-    transition: .3s;
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 22px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:800;
+  transition:.25s;
 }
-
-.btn-primary {
-    background: #38e27d;
-    color: #06100b;
+.primary{
+  background:var(--green);
+  color:#06110b;
 }
-
-.btn-primary:hover {
-    transform: translateY(-3px);
+.primary:hover{transform:translateY(-3px)}
+.secondary{
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.05);
 }
+.secondary:hover{background:rgba(255,255,255,.1)}
 
-.btn-secondary {
-    border: 1px solid rgba(255,255,255,.2);
-    background: rgba(255,255,255,.05);
+.trust{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  margin-top:35px;
+  color:#aebbb3;
+  font-size:12px;
 }
+.trust b{color:var(--green);margin-right:5px}
 
-.btn-secondary:hover {
-    background: rgba(255,255,255,.1);
+/* GENERAL */
+section{padding:105px 0}
+.section-head{
+  max-width:720px;
+  margin-bottom:48px;
 }
-
-/* SECTIONS */
-
-section {
-    padding: 100px 0;
+.kicker{
+  color:var(--green);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  font-weight:900;
 }
-
-.section-title {
-    max-width: 700px;
-    margin-bottom: 50px;
+.section-head h2{
+  font-size:clamp(34px,5vw,56px);
+  line-height:1.02;
+  letter-spacing:-2.5px;
+  margin:11px 0 15px;
 }
-
-.section-title .small {
-    color: #38e27d;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.section-title h2 {
-    font-size: clamp(32px, 5vw, 52px);
-    margin: 12px 0;
-    letter-spacing: -1.5px;
-}
-
-.section-title p {
-    color: #aebbb3;
-}
-
-/* CARDS */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 22px;
-}
-
-.card {
-    background: linear-gradient(145deg,#102018,#0a1610);
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 22px;
-    padding: 30px;
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(56,226,125,.35);
-}
-
-.icon {
-    width: 52px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background: rgba(56,226,125,.12);
-    color: #38e27d;
-    font-size: 24px;
-    margin-bottom: 22px;
-}
-
-.card h3 {
-    margin-bottom: 12px;
-    font-size: 20px;
-}
-
-.card p {
-    color: #aebbb3;
-    font-size: 14px;
+.section-head p{
+  color:var(--muted);
+  font-size:15px;
 }
 
 /* CEE */
+.cee{background:linear-gradient(180deg,var(--bg),#09170f)}
+.cee-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.cee-image{
+  min-height:470px;
+  border-radius:30px;
+  position:relative;
+  background:
+    linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=85")
+    center/cover;
+  box-shadow:0 20px 70px rgba(0,0,0,.3);
+}
+.floating{
+  position:absolute;
+  left:22px;
+  bottom:22px;
+  max-width:280px;
+  padding:18px;
+  background:rgba(5,17,10,.82);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+}
+.floating strong{display:block;margin-bottom:5px}
+.floating small{color:#aebbb3}
 
-.cee {
-    background: #0b1711;
+.checks{
+  display:grid;
+  gap:14px;
+  margin-top:25px;
+}
+.check{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  color:#dce6e0;
+  font-size:14px;
+}
+.check-icon{
+  flex:none;
+  width:23px;height:23px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(67,229,138,.12);
+  color:var(--green);
+  font-weight:bold;
 }
 
-.cee-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+/* B2B / B2C */
+.audience{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
 }
-
-.cee-image {
-    min-height: 420px;
-    border-radius: 25px;
-    background:
-        linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.55)),
-        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
+.audience-card{
+  min-height:390px;
+  padding:34px;
+  border-radius:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
 }
-
-.checks {
-    margin-top: 25px;
+.audience-card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent,rgba(0,0,0,.88));
 }
-
-.check {
-    display: flex;
-    gap: 12px;
-    margin: 15px 0;
-    color: #d5ded9;
+.audience-card>*{position:relative;z-index:1}
+.b2b{
+  background:url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85") center/cover;
 }
-
-.check span {
-    color: #38e27d;
-    font-weight: bold;
+.b2c{
+  background:url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85") center/cover;
 }
-
-/* AUDIENCE */
-
-.audience {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+.pill{
+  align-self:flex-start;
+  margin-bottom:auto;
+  padding:7px 11px;
+  border-radius:20px;
+  background:rgba(67,229,138,.13);
+  border:1px solid rgba(67,229,138,.25);
+  color:var(--green);
+  font-size:11px;
+  font-weight:900;
 }
-
-.audience-card {
-    min-height: 340px;
-    border-radius: 25px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    position: relative;
+.audience-card h3{
+  font-size:34px;
+  margin-bottom:8px;
 }
+.audience-card p{color:#d0d9d4}
 
-.audience-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(transparent,rgba(0,0,0,.85));
+/* SOLUTIONS */
+.solutions{background:#08150e}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
 }
-
-.audience-card > * {
-    position: relative;
+.card{
+  padding:27px;
+  min-height:210px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(145deg,#102419,#09170f);
+  transition:.3s;
 }
-
-.b2b {
-    background:
-        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
+.card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(67,229,138,.3);
 }
-
-.b2c {
-    background:
-        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
+.icon{
+  width:46px;height:46px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:rgba(67,229,138,.1);
+  color:var(--green);
+  font-size:20px;
+  margin-bottom:20px;
 }
-
-.audience-card h3 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.audience-card p {
-    color: #d2dad5;
+.card h3{margin-bottom:8px}
+.card p{
+  color:var(--muted);
+  font-size:13px;
 }
 
 /* PROCESS */
-
-.process {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
 }
-
-.step {
-    position: relative;
-    padding: 25px;
-    border-top: 1px solid rgba(56,226,125,.4);
+.step{
+  padding:25px 22px;
+  border-top:1px solid rgba(67,229,138,.4);
 }
-
-.number {
-    font-size: 13px;
-    color: #38e27d;
-    margin-bottom: 20px;
+.number{
+  color:var(--green);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+.step h3{margin-bottom:8px}
+.step p{
+  color:var(--muted);
+  font-size:13px;
 }
 
 /* CONTACT */
-
-.contact {
-    background:
-        linear-gradient(120deg,#102219,#07110d);
+.contact{
+  background:
+    radial-gradient(circle at 80% 10%,rgba(67,229,138,.1),transparent 30%),
+    linear-gradient(120deg,#0d2116,#06110b);
 }
-
-.contact-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+.contact-layout{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:55px;
+  align-items:start;
 }
-
-.contact-info h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.contact h2{
+  font-size:clamp(38px,5vw,58px);
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin:12px 0 16px;
 }
-
-.contact-info p {
-    color: #aebbb3;
-    margin-bottom: 30px;
+.contact-copy{
+  color:var(--muted);
+  margin-bottom:27px;
 }
-
-.contact-links a {
-    display: block;
-    margin: 14px 0;
-    color: #dfe7e2;
+.contact-links{
+  display:grid;
+  gap:12px;
 }
-
-.contact-links a:hover {
-    color: #38e27d;
+.contact-links a{
+  color:#dce6e0;
+  font-size:14px;
 }
+.contact-links a:hover{color:var(--green)}
 
-form {
-    background: rgba(255,255,255,.04);
-    border: 1px solid rgba(255,255,255,.08);
-    padding: 30px;
-    border-radius: 25px;
+.form{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.1);
+  padding:28px;
+  border-radius:26px;
 }
-
-input,
-textarea,
-select {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    background: #07110d;
-    border: 1px solid rgba(255,255,255,.12);
-    color: white;
-    border-radius: 10px;
-    font-family: inherit;
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
 }
-
-textarea {
-    min-height: 130px;
-    resize: vertical;
+.field{margin-bottom:4px}
+label{
+  display:block;
+  color:#b8c7be;
+  font-size:11px;
+  font-weight:800;
+  margin:0 0 7px 3px;
 }
-
-button {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 30px;
-    background: #38e27d;
-    color: #06100b;
-    font-weight: 800;
-    font-size: 15px;
+input,select,textarea{
+  width:100%;
+  padding:13px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.1);
+  background:#07140d;
+  color:white;
+  outline:none;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:rgba(67,229,138,.6);
+}
+textarea{
+  min-height:125px;
+  resize:vertical;
+}
+.full{grid-column:1/-1}
+.submit{
+  width:100%;
+  border:0;
+  border-radius:30px;
+  padding:15px;
+  background:var(--green);
+  color:#06110b;
+  font-weight:900;
+  cursor:pointer;
+}
+.note{
+  color:#7f9187;
+  font-size:10px;
+  text-align:center;
+  margin-top:10px;
 }
 
 /* FOOTER */
-
-footer {
-    padding: 35px 0;
-    text-align: center;
-    color: #84938a;
-    font-size: 13px;
-    border-top: 1px solid rgba(255,255,255,.08);
+footer{
+  padding:30px 0;
+  border-top:1px solid var(--line);
+  color:#829188;
+  font-size:12px;
 }
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+.footer strong{color:#b7c5bd}
+.footer span{color:var(--green)}
 
 /* WHATSAPP */
-
-.whatsapp {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 999;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #25D366;
-    color: white;
-    font-size: 27px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+.whatsapp{
+  position:fixed;
+  right:19px;
+  bottom:19px;
+  z-index:900;
+  width:58px;height:58px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#25D366;
+  color:white;
+  font-size:27px;
+  box-shadow:0 12px 35px rgba(0,0,0,.35);
 }
 
 /* MOBILE */
-
-@media(max-width:850px) {
-
-    nav {
-        display: none;
-    }
-
-    .grid,
-    .cee-box,
-    .audience,
-    .contact-box {
-        grid-template-columns: 1fr;
-    }
-
-    .process {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .hero h1 {
-        letter-spacing: -2px;
-    }
-
-    section {
-        padding: 75px 0;
-    }
+@media(max-width:950px){
+  nav,.nav-button{display:none}
+  .menu{display:block}
+  .cee-layout,.contact-layout{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .process{grid-template-columns:1fr 1fr}
 }
-
-@media(max-width:550px) {
-
-    .container {
-        width: 92%;
-    }
-
-    .process {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        min-height: 90vh;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .contact-info h2 {
-        font-size: 38px;
-    }
+@media(max-width:650px){
+  .nav{min-height:68px}
+  .hero{
+    min-height:92vh;
+    padding:115px 0 75px;
+  }
+  h1{letter-spacing:-2.7px}
+  .hero p{font-size:16px}
+  section{padding:78px 0}
+  .audience,.cards,.process,.form-grid{
+    grid-template-columns:1fr;
+  }
+  .audience-card{min-height:330px}
+  .cee-image{min-height:330px}
+  .form{padding:20px}
+  .full{grid-column:auto}
+  .footer{flex-direction:column}
 }
 </style>
 </head>
@@ -509,393 +519,255 @@ footer {
 <div class="container nav">
 
 <a href="#accueil" class="logo">
+<span class="logo-mark">E</span>
 Energitech <span>Solution</span>
 </a>
 
 <nav>
 <a href="#cee">CEE</a>
-<a href="#b2b">B2B</a>
-<a href="#b2c">B2C</a>
+<a href="#expertise">Expertise</a>
 <a href="#solutions">Solutions</a>
+<a href="#methode">Méthode</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<a class="nav-button" href="#contact">
-Parlons de votre projet
-</a>
+<a class="nav-button" href="#contact">Étudier mon projet</a>
+
+<button class="menu" id="menu" aria-label="Menu">☰</button>
 
 </div>
 </header>
 
-
 <main>
 
 <!-- HERO -->
-
 <section class="hero" id="accueil">
-
 <div class="container">
-
 <div class="hero-content">
 
 <div class="badge">
-⚡ Solutions énergétiques & CEE
+<span class="dot"></span>
+Performance énergétique & CEE
 </div>
 
 <h1>
-Optimisez votre énergie.<br>
-<span>Valorisez vos projets.</span>
+Transformez vos projets énergétiques en
+<span>opportunités.</span>
 </h1>
 
 <p>
-Energitech Solution accompagne les entreprises et les particuliers dans leurs projets liés à la performance énergétique et aux dispositifs CEE.
+Energitech Solution accompagne professionnels et particuliers dans l'étude de leurs projets de performance énergétique et l'identification des dispositifs CEE adaptés.
 </p>
 
 <div class="buttons">
+<a href="#contact" class="btn primary">⚡ Étudier mon projet</a>
+<a href="#cee" class="btn secondary">Découvrir les CEE →</a>
+</div>
 
-<a href="#contact" class="btn btn-primary">
-Étudier mon projet
-</a>
-
-<a href="#cee" class="btn btn-secondary">
-Découvrir les CEE
-</a>
-
+<div class="trust">
+<span><b>✓</b> Étude personnalisée</span>
+<span><b>✓</b> Accompagnement</span>
+<span><b>✓</b> Professionnels & particuliers</span>
 </div>
 
 </div>
 </div>
 </section>
 
-
 <!-- CEE -->
-
 <section class="cee" id="cee">
-
 <div class="container">
+<div class="cee-layout">
 
-<div class="cee-box">
-
-<div class="cee-image"></div>
-
-<div>
-
-<div class="section-title">
-
-<div class="small">
-Les CEE
+<div class="cee-image">
+<div class="floating">
+<strong>Un projet ? Commençons par l'étudier.</strong>
+<small>
+Les conditions d'éligibilité dépendent notamment du projet, du bâtiment et des critères applicables.
+</small>
+</div>
 </div>
 
-<h2>
-Les Certificats d'Économies d'Énergie
-</h2>
-
+<div>
+<div class="section-head">
+<div class="kicker">Les CEE</div>
+<h2>Comprendre. Identifier. Accompagner.</h2>
 <p>
-Les CEE constituent un dispositif permettant d'encourager la réalisation de travaux et d'équipements améliorant la performance énergétique.
+Le dispositif des Certificats d'Économies d'Énergie vise à encourager des actions permettant d'améliorer la performance énergétique.
 </p>
-
 </div>
 
 <div class="checks">
-
 <div class="check">
-<span>✓</span>
-Analyse du projet
-</div>
-
-<div class="check">
-<span>✓</span>
-Identification des solutions adaptées
+<span class="check-icon">✓</span>
+<span>Analyse des caractéristiques de votre projet</span>
 </div>
 
 <div class="check">
-<span>✓</span>
-Accompagnement administratif
+<span class="check-icon">✓</span>
+<span>Recherche des solutions pouvant correspondre</span>
 </div>
 
 <div class="check">
-<span>✓</span>
-Suivi du dossier
+<span class="check-icon">✓</span>
+<span>Accompagnement dans la préparation du dossier</span>
+</div>
+
+<div class="check">
+<span class="check-icon">✓</span>
+<span>Suivi des différentes étapes du projet</span>
+</div>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
-</div>
-
 </section>
 
-
-<!-- B2B / B2C -->
-
-<section id="b2b">
-
+<!-- EXPERTISE -->
+<section id="expertise">
 <div class="container">
 
-<div class="section-title">
-
-<div class="small">
-Nos accompagnements
-</div>
-
-<h2>
-Des solutions pour les professionnels et les particuliers.
-</h2>
-
+<div class="section-head">
+<div class="kicker">Notre expertise</div>
+<h2>Une approche adaptée à chaque projet.</h2>
 <p>
-Nous étudions votre situation afin d'identifier les dispositifs et solutions énergétiques pouvant correspondre à votre projet.
+Les besoins d'une entreprise, d'un commerce ou d'un logement ne sont pas les mêmes. Nous partons de votre situation pour identifier les pistes pertinentes.
 </p>
-
 </div>
-
 
 <div class="audience">
 
-<div class="audience-card b2b" id="b2b">
-
-<h3>B2B</h3>
-
+<div class="audience-card b2b">
+<span class="pill">B2B • Professionnels</span>
+<h3>Entreprises</h3>
 <p>
-Entreprises, commerces, bureaux, industries, copropriétés et bâtiments professionnels.
+Bureaux, commerces, industries, bâtiments professionnels, copropriétés et autres sites d'activité.
 </p>
-
 </div>
 
-
-<div class="audience-card b2c" id="b2c">
-
-<h3>B2C</h3>
-
+<div class="audience-card b2c">
+<span class="pill">B2C • Particuliers</span>
+<h3>Habitat</h3>
 <p>
-Accompagnement des particuliers dans leurs projets d'amélioration énergétique du logement.
+Étude des projets d'amélioration énergétique du logement et recherche des dispositifs susceptibles de correspondre.
 </p>
-
 </div>
 
 </div>
-
 </div>
-
 </section>
-
 
 <!-- SOLUTIONS -->
-
-<section id="solutions">
-
+<section class="solutions" id="solutions">
 <div class="container">
 
-<div class="section-title">
-
-<div class="small">
-Solutions énergétiques
-</div>
-
-<h2>
-Des projets étudiés au cas par cas.
-</h2>
-
+<div class="section-head">
+<div class="kicker">Solutions énergétiques</div>
+<h2>Des solutions étudiées au cas par cas.</h2>
 <p>
-La prise en charge et les conditions d'éligibilité peuvent dépendre du bâtiment, des travaux, des équipements et des critères applicables au dossier.
+La pertinence et l'éligibilité d'une opération dépendent de nombreux critères.
 </p>
-
 </div>
 
-
-<div class="grid">
+<div class="cards">
 
 <div class="card">
-
 <div class="icon">💡</div>
-
 <h3>Éclairage LED</h3>
-
-<p>
-Solutions d'éclairage à haute efficacité énergétique pour les bâtiments professionnels et particuliers.
-</p>
-
+<p>Solutions d'éclairage à haute efficacité énergétique pour différents types de bâtiments.</p>
 </div>
 
-
 <div class="card">
-
 <div class="icon">🏢</div>
-
 <h3>Bâtiments professionnels</h3>
-
-<p>
-Étude des possibilités d'amélioration énergétique pour bureaux, commerces et locaux professionnels.
-</p>
-
+<p>Analyse des pistes d'amélioration énergétique pour bureaux, commerces et locaux professionnels.</p>
 </div>
 
-
 <div class="card">
-
 <div class="icon">🏠</div>
-
 <h3>Habitat</h3>
-
-<p>
-Solutions permettant d'améliorer le confort et la performance énergétique des logements.
-</p>
-
+<p>Identification de solutions pouvant améliorer le confort et la performance énergétique du logement.</p>
 </div>
 
-
 <div class="card">
-
 <div class="icon">❄️</div>
-
 <h3>Chauffage & équipements</h3>
-
-<p>
-Identification des équipements et solutions pouvant contribuer à réduire les consommations d'énergie.
-</p>
-
+<p>Étude des équipements pouvant contribuer à une meilleure maîtrise des consommations.</p>
 </div>
 
-
 <div class="card">
-
 <div class="icon">♻️</div>
-
 <h3>Rénovation énergétique</h3>
-
-<p>
-Accompagnement dans la réflexion et la préparation de projets de rénovation énergétique.
-</p>
-
+<p>Accompagnement dans la préparation et la structuration des projets de rénovation.</p>
 </div>
-
 
 <div class="card">
-
 <div class="icon">📊</div>
-
-<h3>Étude du projet</h3>
-
-<p>
-Analyse de votre situation afin d'identifier les solutions pertinentes et les démarches à envisager.
-</p>
-
+<h3>Étude de projet</h3>
+<p>Analyse de votre situation et orientation vers les démarches pertinentes.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-
-<!-- PROCESS -->
-
-<section>
-
+<!-- METHODE -->
+<section id="methode">
 <div class="container">
 
-<div class="section-title">
-
-<div class="small">
-Notre méthode
+<div class="section-head">
+<div class="kicker">Notre méthode</div>
+<h2>Simple, claire et structurée.</h2>
+<p>
+Une première prise de contact permet de comprendre votre projet et de déterminer les prochaines étapes.
+</p>
 </div>
-
-<h2>
-Simple, claire et transparente.
-</h2>
-
-</div>
-
 
 <div class="process">
 
 <div class="step">
-
 <div class="number">01 — CONTACT</div>
-
 <h3>Vous nous contactez</h3>
-
-<p>
-Présentez-nous votre projet et vos besoins.
-</p>
-
+<p>Vous nous présentez votre activité, votre logement ou votre projet.</p>
 </div>
 
-
 <div class="step">
-
 <div class="number">02 — ANALYSE</div>
-
 <h3>Nous étudions</h3>
-
-<p>
-Nous analysons les caractéristiques de votre projet.
-</p>
-
+<p>Nous examinons les caractéristiques essentielles du projet.</p>
 </div>
 
-
 <div class="step">
-
-<div class="number">03 — SOLUTIONS</div>
-
+<div class="number">03 — ORIENTATION</div>
 <h3>Nous identifions</h3>
-
-<p>
-Nous recherchons les solutions énergétiques adaptées.
-</p>
-
+<p>Nous recherchons les pistes et dispositifs pouvant correspondre.</p>
 </div>
-
 
 <div class="step">
-
 <div class="number">04 — SUIVI</div>
-
-<h3>Nous vous accompagnons</h3>
-
-<p>
-Nous vous accompagnons dans les différentes étapes du dossier.
-</p>
-
+<h3>Nous accompagnons</h3>
+<p>Nous vous accompagnons dans les différentes étapes.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
-
 <div class="container">
 
-<div class="contact-box">
+<div class="contact-layout">
 
-<div class="contact-info">
+<div>
+<div class="kicker">Contact</div>
 
-<div class="section-title">
+<h2>Parlons de votre projet.</h2>
 
-<div class="small">
-Contact
-</div>
-
-<h2>
-Parlons de votre projet.
-</h2>
-
-<p>
-Vous êtes un particulier ou un professionnel ? Contactez Energitech Solution pour une première étude de votre projet.
+<p class="contact-copy">
+Quelques informations suffisent pour démarrer une première étude.
 </p>
-
-</div>
-
 
 <div class="contact-links">
 
@@ -908,129 +780,117 @@ Vous êtes un particulier ou un professionnel ? Contactez Energitech Solution po
 </a>
 
 <a href="https://wa.me/33757990380" target="_blank">
-💬 Nous contacter sur WhatsApp
+💬 Échanger sur WhatsApp
 </a>
 
 </div>
-
 </div>
 
+<div class="form">
 
-<form onsubmit="sendWhatsApp(event)">
+<form id="contactForm">
 
-<input
-type="text"
-id="name"
-placeholder="Votre nom"
-required
->
+<div class="form-grid">
 
-<input
-type="tel"
-id="phone"
-placeholder="Votre téléphone"
-required
->
+<div class="field">
+<label for="name">Nom / société *</label>
+<input id="name" type="text" placeholder="Votre nom ou société" required>
+</div>
 
-<input
-type="email"
-id="email"
-placeholder="Votre e-mail"
->
+<div class="field">
+<label for="phone">Téléphone *</label>
+<input id="phone" type="tel" placeholder="Votre téléphone" required>
+</div>
 
+<div class="field">
+<label for="email">E-mail</label>
+<input id="email" type="email" placeholder="Votre e-mail">
+</div>
+
+<div class="field">
+<label for="type">Profil</label>
 <select id="type">
-
-<option value="Particulier">
-Particulier
-</option>
-
-<option value="Entreprise">
-Entreprise
-</option>
-
-<option value="Autre">
-Autre
-</option>
-
+<option>Particulier</option>
+<option>Entreprise</option>
+<option>Copropriété</option>
+<option>Autre</option>
 </select>
+</div>
 
-<textarea
-id="message"
-placeholder="Décrivez votre projet..."
-required
-></textarea>
+<div class="field full">
+<label for="project">Votre projet *</label>
+<textarea id="project" placeholder="Décrivez votre projet..." required></textarea>
+</div>
 
-<button type="submit">
-Envoyer ma demande
+<div class="field full">
+<button class="submit" type="submit">
+Envoyer ma demande sur WhatsApp →
 </button>
+<div class="note">
+Votre demande sera préparée dans WhatsApp avant l'envoi.
+</div>
+</div>
+
+</div>
 
 </form>
 
 </div>
-
 </div>
-
+</div>
 </section>
 
 </main>
 
-
 <footer>
-
-<div class="container">
-
-© 2026 Energitech Solution — Solutions énergétiques & CEE
-
+<div class="container footer">
+<div>
+<strong>© 2026 Energitech <span>Solution</span></strong>
 </div>
-
+<div>Performance énergétique & CEE</div>
+</div>
 </footer>
-
 
 <a
 class="whatsapp"
 href="https://wa.me/33757990380"
 target="_blank"
-aria-label="WhatsApp"
->
+aria-label="WhatsApp">
 ☏
 </a>
 
-
 <script>
 
-function sendWhatsApp(event) {
+const menu=document.getElementById("menu");
 
-event.preventDefault();
+menu.addEventListener("click",function(){
+  alert("Utilisez le menu de navigation en haut de la page.");
+});
 
-const name =
-document.getElementById("name").value;
+document.getElementById("contactForm").addEventListener("submit",function(e){
 
-const phone =
-document.getElementById("phone").value;
+e.preventDefault();
 
-const email =
-document.getElementById("email").value;
+const name=document.getElementById("name").value.trim();
+const phone=document.getElementById("phone").value.trim();
+const email=document.getElementById("email").value.trim();
+const type=document.getElementById("type").value;
+const project=document.getElementById("project").value.trim();
 
-const type =
-document.getElementById("type").value;
-
-const message =
-document.getElementById("message").value;
-
-const text =
-"Bonjour Energitech Solution,%0A%0A" +
-"Nom : " + encodeURIComponent(name) + "%0A" +
-"Téléphone : " + encodeURIComponent(phone) + "%0A" +
-"E-mail : " + encodeURIComponent(email) + "%0A" +
-"Profil : " + encodeURIComponent(type) + "%0A%0A" +
-"Projet : " + encodeURIComponent(message);
+const text=
+"Bonjour Energitech Solution,%0A%0A"+
+"Nom / société : "+encodeURIComponent(name)+"%0A"+
+"Téléphone : "+encodeURIComponent(phone)+"%0A"+
+"E-mail : "+encodeURIComponent(email || "Non renseigné")+"%0A"+
+"Profil : "+encodeURIComponent(type)+"%0A%0A"+
+"Projet : "+encodeURIComponent(project);
 
 window.open(
-"https://wa.me/33757990380?text=" + text,
+"https://wa.me/33757990380?text="+text,
 "_blank"
 );
 
-}
+});
 
 </script>
 
